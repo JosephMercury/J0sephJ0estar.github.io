@@ -98,26 +98,35 @@ you can complete it perfectly. You can get the instruction from "No.5 Transforma
 
 <div id="howtodo_section">
 <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section I'll introduce my self-made stick man roughly, which is made by codeblocks with openGl. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section I'll introduce my self-made stickman roughly, which is made using C with openGl. 
 The following are some main points. 
 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The body drawing issues: There're several parts in human body and they are connected with each other. 
-They can be devided into different layers, say main layers and subordinate layers. The movement of sub-layers are affected by the main ones, 
-but they have their own way of moving also. So we may draw the main layers firstly, setting up their moving styles, and then it's time for the sub-layers.
- In openGL, we can use glPushMatrix() and glPopMatix() to achieve this way of drawing. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body drawing issues: There're several parts in human body and they are connected with each other. We use cubes
+to represent all the parts, for each cube, we need the coordinates of 6 points to draw 12 lines.
+Body can be devided into different layers, say main layers and subordinate layers. The movement of sub-layers are affected by the main ones, 
+but they have their own way of moving too. So we may draw the main layers firstly, setting up their moving styles, and then it's time for 
+the sub-layers. In openGL, we can use glPushMatrix() and glPopMatix() to achieve this way of drawing. 
 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The movement issues: As a matter of fact, there's no continuous movement in my work.
- Instead, I break a movement into pieces and draw it by and by after a small interval. The so-called "walking around" here is
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Movement issues: As a matter of fact, there's no continuous movement in my work.
+ Instead, I break a movement into pieces and draw it by and by once after a small interval. The so-called "walking around" here is the
  whole body(image) rotating round the z-axis. Also, the so-called "rotating" is achieved by changing the angle every time on body drawing. 
-For instance, we use glRotatef(angle,0,0,1) for the "rotating" movement, and every loop an "a" is added to angle so that it seems the body 
+For instance, we use glRotatef(angle,0,0,1) for the "rotating" movement, and every loop an "a" is added to "angle" so that it seems the body 
 is walking in a round way.
 <br />
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Naturality issues: To make the movement of my stickman more natural, that is to say, to make it act as if a real man,
+ there's a lot to do. But eventually what I've done is still very superficial. In the second part, the rotating action has been discussed. For legs and arms,
+ they also move as if rotate round an axis, but their axises are more partial. To achieve a view of walking around, the whole body should be set 
+ to rotate round z-axis located in original point, but for arms/legs, the axis they rotate round is x-axis and the start points is in layers higher than them.
+ For two parts in a single leg/arm, it's all the same. The upper part and lower part rotate round their higher layer, and for the lower one, the upper one is
+ also its higher layer. In detail, there are two parts in both arms and legs. A single leg/arm move together on the whole, but the lower part will have its
+ own way of rotating contrast to their upper pair. For arms, when the upper is in front of body and moving forward, the lower one moves faster till reaches
+ a certain angle(still bigger than upper one finally); so when the upper is in front of body and moving backward, the lower one will move faster till parallel
+ to the upper, which acts as a arm-shaking. For legs, when the upper is behind body, the rotation angle of the lower one is a bit larger than former on which
+ shows as if it's a leg bent. To make all these done, it requires many if-else conditions and two parameters added to arms and legs separately, whose sign acts
+ as a singnal to determine the direction of moving.  
 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And you can get the source code here:
-<a href="code.c">code.c</a>.
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run it in windows with openGL, you may also need this:
+<a href="code.c">code.c</a>. To run it in windows with openGL, you may also need this:
 <a href="unistd.h">unistd.h</a>.
 </div>
 
@@ -127,7 +136,7 @@ is walking in a round way.
 
 <div id="demo_section">
 <p>
-The following is a gif converted from my self-made video 
+There's a gif converted from my self-made video below 
 </p>
 <div id="demo_section">
 <img src="self_stickman.gif" alt="Self_made Stick Man Demon Not Found"></img>
