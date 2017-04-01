@@ -101,8 +101,8 @@ you can complete it perfectly. You can get the instruction from "No.5 Transforma
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section I'll introduce my self-made stickman roughly, which is made using C with openGl. 
 The following are some main points. 
 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body drawing issues: There're several parts in human body and they are connected with each other. We use cubes
-to represent all the parts, for each cube, we need the coordinates of 6 points to draw 12 lines.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Body drawing issues: There're several parts in human body and they are connected with each other. Using cubes
+to represent all the parts here, and for each cube, the coordinates of 6 points are needed to draw 12 lines.
 Body can be devided into different layers, say main layers and subordinate layers. The movement of sub-layers are affected by the main ones, 
 but they have their own way of moving too. So we may draw the main layers firstly, setting up their moving styles, and then it's time for 
 the sub-layers. In openGL, we can use glPushMatrix() and glPopMatix() to achieve this way of drawing. 
