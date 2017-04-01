@@ -1,4 +1,4 @@
-#include<windows.h>//一定要加在第一行不然会报错
+#include<windows.h>//一定要加在第一行
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
