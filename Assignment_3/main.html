@@ -1,6 +1,9 @@
 <html>
+
     <title>Assignment III: Ray Tracing</title>
+    
 <head>
+
     <style>
         #main_title
         {
@@ -67,8 +70,11 @@
             padding:0.1px;
         }
     </style>
+    
 </header>
+
 <body>
+
     <div id="main_title">
         <h1><a id="top"></a>Assignment III: Ray Tracing</h1>
     </div>
@@ -100,9 +106,26 @@
     </div>
 
     <div id="howtodo_section">
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And you can get the source code here:<a href="/Assignment_3/code">code</a>. 
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shape-Drawing Issues: To achieve different shading methods, a new object is drawed to replace
+        the former stickman model here, a sphere. To simulate a view of objects influenced by light, the color of every coordinate pair should be 
+        computed separately. So the vertex information is stored in a .vbo(Vertex Buffer Object) file to draw the sphere instead of using methods 
+        produced by openGL.<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shading Issues: A shader is written to be called by the program like a function to compute certain colors. 
+        The following are details about shader of three shading methods. They all set a certain light position from which the light comes and 
+        use ambient color, diffuse color and specular color to compute the final result but there're differences in interpolation. In float shading, 
+        there's no interpolation indeed, and in its shader this is achieved easily by adding a "float" before every "in" and "out" of phong shading or gouraud 
+        shading. For phong shading and gouraud shading, the difference lies in their way of interpolating values inside a fragment. The 
+        gouraud shading will just using linear interpolation according to its vertex values, but phong shading will carry normal vector interpolation operations 
+        according to the normal vector of vertexes before handling one fragment. And here's a image showing this below:
+            <div style="padding:0px 0px 0px 33px">
+                <img src="differ.jpg" width="529px" height="256px" alt="Differ Image Not Found!"/>
+            </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display Issues: To totally complete this assignment, the object simulated should be displayed in a window, and 
+        different methods should be put together to compare with each other. So firstly load the .vbo file to draw a sphere, the bind it with these shaders 
+        and display it in a window, then use a keyboard listener to switch shading methods by listening to the iuput, binding new shader and redrawing. And 
+        that's just all about it.<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can get the source code and all the related files(.vbo/shaders) here:<a href="code">codeList</a>.
+        </p>
     </div>
 
     <div id="demo_header">
@@ -110,8 +133,9 @@
     </div>
 
     <div id="demo_section">
-        <p>Here's a gif converted from my self-made video below </p>
-        <p>And it's FloatShading model, GouraudShading model and PhongShading model in sequence</p>
+        <p>Here's a gif converted from my self-made video below~</p>
+        <p>And it's float shading-model, gouraud-shading model and phong-shading model in sequence~</p>
+        <p>As you can see, it's getting smoother and smoother~</p>
             <div id="demo_section">
                 <img src="self_Shading.gif" alt="Self_made Shading Demon Not Found"></img>
             </div>
@@ -129,4 +153,5 @@
     </div>
 
 </body>
+
 </html>
