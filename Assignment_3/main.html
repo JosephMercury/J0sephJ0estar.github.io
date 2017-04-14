@@ -107,25 +107,25 @@
 
     <div id="howtodo_section">
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shape-drawing Issues: To achieve different shading methods, a new object is drawed to replace
-        the former stickman model here, a sphere. To simulate a view of objects influenced by light, the color of every coordinate pair should be 
+        the former stickman model here, a sphere. To simulate the view of objects influenced by light, the color of every coordinate pair should be 
         computed separately. So the vertex information is stored in a .vbo(Vertex Buffer Object) file to draw the sphere instead of using methods 
         produced by openGL.<br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shading Issues: A shader is written to be called by the program like a function to compute colors of certain parts, 
         and here're three shaders represent three shading methods. They all set a certain light position from which the light comes and 
-        use ambient color, diffuse color and specular color to compute the final result but they differ with each other in interpolating processi. In float shading, 
+        use ambient color, diffuse color and specular color to compute the final result but they differ with each other in interpolating process. In float shading, 
         there's no interpolation indeed. In its shader that's achieved easily by adding a "float" before every "in" and "out" of phong shader or gouraud 
         shader. For phong shading and gouraud shading, the difference lies in their way of interpolating values inside a fragment. The 
         gouraud shading will just using linear interpolation according to its vertex values, but phong shading will carry normal vector interpolation operations 
         according to the normal vector of vertexes before handling one fragment, then use the normal vector of every point to get the final result. 
-        And here's a image showing this below:
+        Here's a image showing this below:
             <div style="padding:0px 0px 0px 33px">
                 <img src="differ.jpg" width="529px" height="256px" alt="Differ Image Not Found!"/>
             </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Display Issues: To totally complete this assignment, the object simulated should be displayed in a window, and 
-        different methods should be put together to compare with each other. So firstly load the .vbo file to draw a sphere, the bind it with these shaders 
+        different methods should be put together to compare with each other. So firstly load the .vbo file to draw a sphere, secondly bind it with these shaders 
         and display it in a window, then use a keyboard listener to switch shading methods by listening to the iuput, binding new shader and redrawing. And 
         that's just all about it.<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can get the source code and all the related files(.vbo/shaders) here:<a href="code">codeList</a>.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can get the source code and all the related files(.vbo/shaders) here: <a href="code">codeList</a>.
         </p>
     </div>
 
