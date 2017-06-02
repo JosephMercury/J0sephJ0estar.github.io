@@ -1,0 +1,140 @@
+<html>
+
+    <title>Assignment IV: Free Style(optional)</title>
+    
+<head>
+
+    <style>
+        #main_title
+        {
+            font-size:18px;
+            font-family:verdana;
+            color:black;
+            text-align:center;
+        }
+        #task_header
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:left;
+            background-color:A3D1D1;
+            padding:0.5px;
+        }
+        #task_section
+        {
+            font-size:16px;
+            font-family:verdana;
+            color:black;
+            text-align:left;
+        }
+        #howtodo_header
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:left;
+            background-color:A3D1D1;
+            padding:0.5px;
+        }
+        #howtodo_section
+        {
+            font-size:16px;
+            font-family:verdana;
+            color:balck;
+            text-align:left;
+        }
+        #demo_header
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:left;
+            background-color:A3D1D1;
+            padding:0.5px;
+        }
+        #demo_section
+        {
+            font-size:16px;
+            font-family:verdana;
+            color:balck;
+            text-align:center;
+        }
+        #related_section
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:right;
+            background-color:A3D1D1;
+            padding:0.1px;
+        }
+    </style>
+    
+</header>
+
+<body>
+
+    <div id="main_title">
+        <h1><a id="top"></a>Assignment IV: Free Style(optional)</h1>
+    </div>
+    
+    <div id="task_header">
+        <h2>Description:</h2>
+    </div>
+    
+    
+    <div id="task_section">
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In fact, there's no description.<br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do whatever you like, and you may even choose to do nothing.
+       </p>
+    </div>
+
+    <div id="howtodo_header">
+        <h2>Design Issues:</h2>
+    </div>
+
+    <div id="howtodo_section">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Texture mapping is choosen for this assignment. And it's a pretty simple one without considering 
+        interpolation or anti-aliasing.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object-drawing Issues: A tetragonal pyramid is used here to which the texture flie is mapped. It consists of 
+        four triangles and one squre, that is to say, five vertices needed totally. A squre can be drawed using four points or using two pairs of three point sets 
+        to draw two triangles separately.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Texture Mapping Issues: Load texture file and set texture environment firstly. To map a texture image to a surface, 
+        the vertices of corresponding surfaces and texture image is needed. Four coordinate points (0,1),(1,1),(0,0),(1,0) are used to represent upper left, upper right, bottom 
+        left, bottom right of texture image separately, so we can achieve the mapping procedure easily by mapping points properly(well also with the help of 
+        gltools in fact). Below you can see the texture image used here and the pictures showing the mapping method, which can be more intuitively to understand when 
+        showed as a picture.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can get the source code and all the related files here: <a href="code/index.html">codeList</a>.<br>
+            <table>
+                <tr>
+                    <td><img src="texture.jpg"  width="320px" height="270px" alt="BallsRender Image Not Found" style="padding:0px 0px 0px 150px"/></td>
+                    <td><img src="1.png"  width="320px" height="270px" alt="Ray_trace Image Not Found"/></td>
+                    <td><img src="2.png"  width="320px" height="270px" alt="Ray_trace Image Not Found"/></td>
+                </tr>
+            </table>
+    </div>
+
+    <div id="demo_header">
+        <h2>Demo:</h2>
+    </div>
+
+    <div id="demo_section">
+        <p>Here's a gif converted from my self-made video below~</p>
+                <img src="texture.gif" alt="Texture Demon Not Found"></img>
+    </div>
+
+    <div id="related_section">
+        <p>Way Back:
+            <br>
+        Course Home Page:<a href="http://www.cs.sdu.edu.cn/~baoquan/course/S17_CG.html">Graphics Course</a>
+            <br>
+        My Home Page:<a href="https://j0sephj0estar.github.io/">(@o@)!</a>
+            <br>
+        <a href="#top">Back To Top</a>
+        </p>
+    </div>
+
+</body>
+
+</html>
