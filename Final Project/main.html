@@ -1,0 +1,129 @@
+<html>
+
+    <title>Final Project</title>
+    
+<head>
+
+    <style>
+        #main_title
+        {
+            font-size:18px;
+            font-family:verdana;
+            color:black;
+            text-align:center;
+        }
+        #task_header
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:left;
+            background-color:A3D1D1;
+            padding:0.5px;
+        }
+        #task_section
+        {
+            font-size:16px;
+            font-family:verdana;
+            color:black;
+            text-align:left;
+        }
+        #howtodo_header
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:left;
+            background-color:A3D1D1;
+            padding:0.5px;
+        }
+        #howtodo_section
+        {
+            font-size:16px;
+            font-family:verdana;
+            color:balck;
+            text-align:left;
+        }
+        #demo_header
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:left;
+            background-color:A3D1D1;
+            padding:0.5px;
+        }
+        #demo_section
+        {
+            font-size:16px;
+            font-family:verdana;
+            color:balck;
+            text-align:center;
+        }
+        #related_section
+        {
+            font-size:14px;
+            font-family:verdana;
+            color:white;
+            text-align:right;
+            background-color:A3D1D1;
+            padding:0.1px;
+        }
+    </style>
+    
+</header>
+
+<body>
+
+    <div id="main_title">
+        <h1><a id="top"></a>Final Project: Ray Tracing</h1>
+    </div>
+    
+    <div id="task_header">
+        <h2>Description:</h2>
+    </div>
+    
+    <div id="task_section">
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create your own scene using ray tracing algrithm.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You may choose to draw half of your scene by yourself and the other half by using openGL, then merge them 
+        into a whole one to compare with each other, but you can also draw a whole scene by one method.
+       </p>
+    </div>
+
+    <div id="howtodo_header">
+        <h2>Design Issues:</h2>
+    </div>
+
+    <div id="howtodo_section">
+        <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Only draw a single scene here because I just don't konw how to merge it with openGL rendered ones.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code Design Issues: To describe the direction of a piece of light and the norm vector of an object, a 3d vector 
+        is needed, so there's a point class. Also, there's a material class to restore different reflection properties of different objects made of different 
+        materials and a ray class to define the starting position of a light and provide functions to check whether a light is intersected with an object<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ray Casting Issues: Each ray must be tested for intersection with some subset of all the objects in the scene. 
+        Once the nearest object has been identified, the algorithm will estimate the incoming light at the point of intersection, examine the material 
+        properties of the object, and combine this information to calculate the final color of the pixel. Phong illumination is used here.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And here's the code: <a href="ray_tracing.cpp">code</a>.<br>
+        </p>
+    </div>
+
+    <div id="demo_header">
+        <h2>Demo:</h2>
+    </div>
+
+    <div id="demo_section">
+        <p>Here's a screenshot of my ray-tracing scene below~</p>
+            <img src="ray_tracing.png" alt="Ray_tracing Demon Not Found"></img>
+    </div>
+
+    <div id="related_section">
+        <p>Way Back:<br>
+        Course Home Page:<a href="http://www.cs.sdu.edu.cn/~baoquan/course/S17_CG.html">Graphics Course</a><br>
+        My Home Page:<a href="https://j0sephj0estar.github.io/">(@o@)!</a><br>
+        <a href="#top">Back To Top</a>
+        </p>
+    </div>
+
+</body>
+
+</html>
